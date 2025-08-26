@@ -1,25 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import GenreSelector from './Components/GenreSelector/GenreSelector';
+import GameCard from './Components/GameSelector/GameCard';
+
 
 function App() {
+  const [selectedGenres, setSelectedGenres] = useState([])
+  const [showGames, setShowGames] = useState(false) 
+
+  const handleButtonClick = () => {
+    setShowGames(true)
+  }
+
+  const handleResetButtonClick = () => {
+    setShowGames(false)
+    setSelectedGenres([])
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className='Title-header'>
+        <h1>
+          Game Finder!
+        </h1>
       </header>
-    </div>
+      <main>
+        {!showGames ? (
+          <>
+            <div className='Genre-select-banner'>
+              <h3 className='Genre-select-header'>
+                Pick your Genres:
+              </h3>
+              <button className={selectedGenres.length === 0 ? "GoButton-disabled" : "GoButton"} onClick={() => handleButtonClick()}>Go!</button>
+            </div>
+            <GenreSelector selectedGenres={selectedGenres} setSelectedGenres={setSelectedGenres} />
+          </>
+        ) : (
+          <>
+             <button onClick={() => handleResetButtonClick()} className='GoButton'>Reset</button>
+            <GameCard selectedGenres={selectedGenres} />
+          </>
+        )}
+      </main>
+    </>
   );
 }
+
+
 
 export default App;
