@@ -4,6 +4,11 @@ A React web application where users can select multiple genres and discover game
 
 ---
 
+## Link to project: https://robertwmorgan.github.io/gamepicker
+
+
+---
+
 ## 🌟 Why I Built This
 This project was created to practice **modern frontend development skills** while working with a real-world API. It showcases my ability to:
 - Build reusable React components.
