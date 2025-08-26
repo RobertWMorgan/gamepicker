@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gamepicker/static/css/main.f81e5ff6.css",
+    "main.js": "/gamepicker/static/js/main.0bc97c5d.js",
+    "static/js/453.a5696fcd.chunk.js": "/gamepicker/static/js/453.a5696fcd.chunk.js",
+    "index.html": "/gamepicker/index.html",
+    "main.f81e5ff6.css.map": "/gamepicker/static/css/main.f81e5ff6.css.map",
+    "main.0bc97c5d.js.map": "/gamepicker/static/js/main.0bc97c5d.js.map",
+    "453.a5696fcd.chunk.js.map": "/gamepicker/static/js/453.a5696fcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f81e5ff6.css",
+    "static/js/main.0bc97c5d.js"
+  ]
+}
